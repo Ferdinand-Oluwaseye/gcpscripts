@@ -1,0 +1,10 @@
+[unit]
+Description=Cloud deployment of project
+
+[Service]
+User=clouduser
+WorkingDirectory=/home/clouduser
+ExecStart=/usr/bin/node /home/clouduser/TeamB_Pool_Project_API/index.js
+
+[Install]
+WantedBy=multi-user.target
