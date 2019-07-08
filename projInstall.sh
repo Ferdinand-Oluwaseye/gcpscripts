@@ -17,24 +17,25 @@ fi
 	
 	sudo apt install curl
 
-	cd /home/clouduser/public
+	
 
 	#install node and npm
 	curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 	sudo apt-get install -y nodejs
-
-
-	#clone repositories
-	git clone -b Developer https://github.com/DimitriosKan/TeamB_Pool_Project_API.git
 	
-	git clone https://github.com/Ferdinand-Oluwaseye/gcpscripts.git 
+	
+	
+	#clone repositories
+	sudo su - clouduser -c "cd public && git clone -b Developer https://github.com/DimitriosKan/TeamB_Pool_Project_API.git"
+	
+	sudo su - clouduser -c "cd public && git clone https://github.com/Ferdinand-Oluwaseye/gcpscripts.git" 
 
-	cd public/TeamB_Pool_Project_API
+	sudo su - clouduser -c "cd public/TeamB_Pool_Project_API && npm install && sudo npm install express --save && sudo npm install mongoose --save"
 
-	sudo npm install
+	#sudo npm install
 
-	sudo npm install express --save
-	sudo npm install mongoose --save
+	#sudo npm install express --save
+	#sudo npm install mongoose --save
 
 
 
