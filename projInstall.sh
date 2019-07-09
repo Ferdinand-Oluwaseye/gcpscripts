@@ -43,7 +43,7 @@ fi
 
 	#Writing service file
 
-	sudo cp  home/clouduser/public/gcpscripts/myproj.service /etc/systemd/system/myproj.service
+	sudo cp -r /home/clouduser/public/gcpscripts/myproj.service /etc/systemd/system/myproj.service
 
 	#Load service
 	sudo systemctl daemon-reload
